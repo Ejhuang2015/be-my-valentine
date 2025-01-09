@@ -1,0 +1,271 @@
+/* ----- 1. Content Formatting Options----- */
+/* HTML Style */
+html {
+    background: rgb(186, 127, 176);
+    background-image: url('Abstract-BG.jpg') ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    background: transparent;
+    color:var(--darkRed);
+}
+
+/* Header Style */
+.header {
+    background-color: rgba(255, 238, 238, 0.5);
+    padding: 10px;
+    padding-top: 20px;
+    border: dashed 2px var(--lightRed);
+    border-radius: 10px;
+}
+
+/* Main Content Container */
+.container {
+    padding: 5px;
+    margin: auto;
+    background: rgba(255, 238, 238, 0.5);
+    border-radius: 25px;
+    border: 2px solid var(--lightRed);
+    display: flex;
+    justify-content: center;
+}
+
+/* Section Header/Title */
+.sectionTitle {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px auto 15px auto;
+    width: 80%;
+    border: 2px solid var(--lightRed);
+    border-radius: 10px;
+    background-color: rgba(214, 103, 166, 0.5);
+}
+
+/* ----- 2. Element Formatting Options----- */
+/* Anchor Tags */
+a {
+    color: var(--darkRed);
+}
+a:hover, 
+a:active {
+    color: var(--babyRed);
+}
+
+/* Button Tags */
+.button {
+    padding: 12px 20px;
+}
+
+.buttonBlue {
+    border-radius: 5px;
+    background-color: var(--whiteBlue);
+    color: var(--darkBlue);
+    border-color: var(--lightBlue);
+}
+.buttonBlue:hover, 
+.buttonBlue:active {
+    background-color: rgb(32, 77, 83);
+    color: rgb(195, 230, 233);
+}
+
+.buttonRed {
+    border-radius: 5px;
+    background-color: var(--whiteRed);
+    color: var(--darkRed);
+    border-color: var(--lightRed);
+}
+.buttonRed:hover, 
+.buttonRed:active {
+    background-color: rgb(83, 32, 32);
+    color: rgb(233, 195, 195);
+}
+/* Text Input Tags */
+input[type=text], input[type=email], textarea {
+    margin: 5px 0px;
+    padding: 12px;
+    border: 1px solid var(--lightRed);
+    resize: vertical;
+    border-radius: 3px;
+}
+textarea {
+    min-height: 3rem;
+    height: 12rem;
+}
+
+/* h1-6 Styling */
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Horizontal Rule */
+hr {
+    size: 2px;
+    background-color: var(--lightRed);
+}
+hr.tinyHR {
+    width: 25%;
+    margin: 5px auto;
+}
+hr.smallHR {
+    width: 75%;
+    margin: 5px auto;
+}
+hr.wideHR {
+    width: 95%;
+    margin: 5px auto;
+}
+hr.fullHR {
+    width: 100%;
+    margin: 5px auto;
+}
+/* Lists */
+ul {
+    list-style-type:disc;
+    margin-left: 2em;
+    margin-top: 1em;
+}
+ul.noBullets {
+    list-style-type:none;
+    margin: auto;
+}
+ul.noBullets > li {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+ul.alternating > li:nth-child(odd) {
+    background-color: #ef80fb55;
+}
+
+/* Fancy Text */
+p.quote {
+    font-size: 25px;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 2rem;
+}
+
+/* ----- 3. Basic Formatting Options----- */
+/* Center contents */
+.centered {
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+}
+
+/* Display content in Column */
+.flexCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Row Reverse display */
+@media screen and (min-width: 1024px) {
+    .reverseRow {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+/* Bottom border underline */
+.underlined {
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+    border-bottom: solid 1px var(--lightRed);
+}
+
+/* Hide content */
+.invis {
+    display: none;
+}
+
+/* Show content */
+.appear {
+    display: block;
+}
+
+/* Display content in a single line */
+.singleLine {
+    display: initial;
+}
+
+/* Add in a border */
+.bordered {
+    border: 2px solid var(--lightRed);
+    padding: 2px;
+}
+
+/* Curve the border */
+.borderCurved {
+    border-radius: 25px;
+}
+
+/* ----- 4. Unique Entities ----- */
+#yesBtn, #noBtn {
+    font-size: 64px;
+    min-width: 150px;
+    transition: 0.5s;
+}
+
+.content {
+    width: 80vw;
+}
+
+.buttons {
+    margin-top: 2em;
+}
+
+.fuzzy-bubbles-regular {
+    font-family: "Fuzzy Bubbles", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fuzzy-bubbles-bold {
+    font-family: "Fuzzy Bubbles", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ----- X. Variables ----- */
+/* Colors */
+:root {
+    --lightBlue: #80FBF2;
+    --darkBlue: #163A54;
+    --whiteBlue: #e0f5f3;
+    --babyBlue: #5FA3FC;
+    --lightRed: #fb80a5;
+    --darkRed: #541616;
+    --whiteRed: #f5e0ec;
+    --babyRed: #e0736f;
+}
+
+/* Notes
+border-color: rgb(128,251,242) #80FBF2
+Text color: rgb(22,58,84); //#163A54
+background-color: rgb(238,255,251,0.5); //#e0f5f3
+
+Hover color: rgb(95, 163, 252); //5FA3FC
+
+Footer Gradient
+border-image: radial-gradient(#80acff, rgb(128,251,242)) 1; 
+
+Background Gradient (Top Left to bottom right)
+#B8DCC0,#7FB1B8,#64647E
+*/
