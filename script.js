@@ -52,6 +52,7 @@ let curPromptBeg = 0;
 let curPromptHappy = 0;
 let curGifBeg = 0;
 let curGifHappy = 0;
+let noCnt = 0;
 
 function randomNumberGenerator(max, current) {
     let randInt = Math.floor(Math.random() * max);
@@ -69,11 +70,17 @@ function noClicked() {
         resizeButtons();
         resizeCnt++;
     };
+    noCnt++;
 }
 
 function yesClicked() {
     document.getElementById("screenMain").style.display = "none";
     document.getElementById("screenYes").style.display = "block";
+    if (noCnt === 0) {
+        document.getElementById("noText").style.display = "none";
+    } else {
+        document.getElementById("noCnt").innerHTML = noCnt;
+    }
     createConfetti();
     setInterval(updatePromptHappy, 3 * 1000);
     // setInterval(updateGifHappy, 3 * 1000);
